@@ -4,7 +4,11 @@
     "express": "^4.21.2",
     "lodash": "^4.17.21",
     "node": "^22.13.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-google-oidc": "^0.1.0"
   },
   "name": "basic",
   "version": "1.0.0",
