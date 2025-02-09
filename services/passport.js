@@ -12,7 +12,7 @@ passport.deserializeUser((id,done)=>{
     User.findById(id).then(user=>{done(null,user)})
 })
 passport.use(new GoogleStrategy({
-    clientID:keys.googleClinetId,
+    clientID:keys.googleClientId,
     clientSecret:keys.googleClientSecret,
     callbackURL:'http://localhost:5000/auth/google/callback'
 },(accessToken,refreshToken,profile,done)=>{
