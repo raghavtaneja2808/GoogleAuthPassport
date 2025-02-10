@@ -14,7 +14,7 @@ passport.deserializeUser((id,done)=>{
 passport.use(new GoogleStrategy({
     clientID:keys.googleClientId,
     clientSecret:keys.googleClientSecret,
-    callbackURL:'/auth/google/callback'
+    callbackURL:keys.callbackURL||'/auth/google/callback'
 },(accessToken,refreshToken,profile,done)=>{
     User.findOne({googleID:profile.id}).then((user)=>{if(!user){  new User({googleID:profile.id}).save().then(user=>done(null,user));}
     else{done(null,user)};console.log(user);
